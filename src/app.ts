@@ -1,4 +1,4 @@
 import { loadConfigs } from './config';
-import { ENV } from './types';
+import { G_ENV as ENV } from './types';
 
 loadConfigs(ENV.dev);

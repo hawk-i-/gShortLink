@@ -1,9 +1,20 @@
 import { readdirSync, lstatSync } from 'fs';
 import { join } from 'path';
 import { chain, isNil } from 'lodash';
-import { ENV } from './types';
+import { G_ENV as ENV } from './types';
 
 export const CONFIG_PATH = join(__dirname, '../config');
+
+class ConfigStore {
+
+    env: ENV
+    configs: object
+
+    constructor(env: ENV) {
+        this.env = env;
+        this.configs = ;
+    }
+}
 
 export const loadConfigs = (env ?: ENV) => {
     console.log(ENV[env]);
